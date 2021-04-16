@@ -4,7 +4,7 @@ Api documentation generate package [Git hub link](https://github.com/ovac/idoc?r
 ## Override this package
 iDocs package cann't support multiple response add. so we want to add multiple response.
 
-Create `App\MyCustom\IDoc` directory & add this copy this code here
+Create `App\MyCustom\IDoc\IDocGeneratorCommand` `Class` this directory & paste this code there.
 
 ```php
 namespace App\MyCustom\IDoc;
@@ -550,7 +550,7 @@ class IDocGeneratorCommand extends Command
 
 ```
 
-Register this code appservice provider or any custom provider copy this code 
+Register this code app Service provider or any custom provider copy this code 
 
 ```php
  /**IDoc generator class override and register it */
@@ -562,4 +562,6 @@ $this->commands([
 
 Finally run this command
 `php artisan idoc:generated`
+
+> This code suport 3 response added successfully. You want to add more response, customize `multiResponse` function
 
